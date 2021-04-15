@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trang chủ</title>
+<link rel="stylesheet" type="text/css"  href="css/Style.css">
+</head>
+<body>
+  <header>
+    <div>
+     <img src="logo/br2.png">
+    </div>
+  </header>
+  <nav>
+    <div id="subnav">
+    <ul>
+		<li><a href="Trangchu.html"> TRANG CHỦ</a></li>
+		<li><a href="gioithieu1.html"> GIỚI THIỆU</a></li>
+		<li><a href="lienhe.html">LIÊN HỆ</a></li>
+  </ul>
+     <input type="text" name="tseach"
+        placeholder="Search...">
+       <input type="submit"value="Search" title="Search">
+  <ul>
+   <li> <a href="dangnhap1.html"> ĐĂNG NHẬP </a></li>
+   <li> <a href="dangky1.html"> ĐĂNG KÝ </a></li>
+   <li><a href="Trangchu.html">GIỎ HÀNG</a> </li>
+  </ul>
+  </div>
+
+  </nav>
+  <div id="body">
+      <aside id="left">
+        <div>
+        <p>DANH MỤC SẢN PHẨM</p>
+        <ul>
+            <li><a href="banan.html">BÀN ĂN</a></li>
+            <li><a href="giuongngu.html">GIƯỜNG NGỦ</a></li>
+            <li><a href="banlamviec.html">BÀN LÀM VIỆC</a></li>
+            <li><a href="banghephongkhach.html">BÀN GHẾ PHÒNG KHÁCH</a></li>
+            <li><a href="tuquanao.html">TỦ QUẦN ÁO</a></li>
+            <li><a href="sofa.html">SOFA</a></li>
+            <li><a href="tugaydep.html">TỦ GIÀY DÉP</a></li>
+            <li><a href="tivi.html">KỆ TỦ TIVI</a></li>
+            <li><a href="bantrangdiem.html">BÀN TRANG ĐIỂM</a></li>
+            <li><a href="nem.html">NỆM</a></li>
+       </ul>
+      </div>
+      <div>
+    <p> CHẤT LIỆU </p>
+        <ul>
+            <li><a href="bananinox.html">BÀN ĂN INOX</a></li>
+            <li><a href="banghenhua.html">BÀN GHẾ NHỰA</a></li>
+            <li><a href="tunhom.html">TỦ NHÔM</a></li>
+            <li><a href="banda.html">BÀN ĐÁ</a></li>
+            <li><a href="tukinh.html">TỦ KÍNH</a></li>
+            <li><a href="tunhua.html">TỦ NHỰA</a></li>
+            <li><a href="gheda.html">GHẾ ĐÁ</a></li>
+
+        </ul> 
+      </div>  
+      <div class="calendar">
+        <script language="javascript">
+
+            monthnames = new Array("January", "Februrary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            var linkcount = 0;
+
+            function addlink(month, day, href) {
+                var entry = new Array(3);
+                entry[0] = month;
+                entry[1] = day;
+                entry[2] = href;
+                this[linkcount++] = entry;
+            }
+            Array.prototype.addlink = addlink;
+            linkdays = new Array();
+            monthdays = new Array(12);
+            monthdays[0] = 31;
+            monthdays[1] = 28;
+            monthdays[2] = 31;
+            monthdays[3] = 30;
+            monthdays[4] = 31;
+            monthdays[5] = 30;
+            monthdays[6] = 31;
+            monthdays[7] = 31;
+            monthdays[8] = 30;
+            monthdays[9] = 31;
+            monthdays[10] = 30;
+            monthdays[11] = 31;
+            todayDate = new Date();
+            thisday = todayDate.getDay();
+            thismonth = todayDate.getMonth();
+            thisdate = todayDate.getDate();
+            thisyear = todayDate.getYear();
+            thisyear = thisyear % 100;
+            thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 + thisyear));
+            if (((thisyear % 4 == 0) && !(thisyear % 100 == 0)) || (thisyear % 400 == 0)) monthdays[1]++;
+            startspaces = thisdate;
+            while (startspaces > 7) startspaces -= 7;
+            startspaces = thisday - startspaces + 1;
+            if (startspaces < 0) startspaces += 7;
+
+            document.write("<table border='1'>");
+            document.write("<tr><td colspan=7 class='monthyear'>" + monthnames[thismonth] + " " + thisyear + "</td></tr>");
+            document.write("<tr class='weektitle'>");
+            document.write("<td align= center>Sun</td>");
+            document.write("<td align= center>Mon</td>");
+            document.write("<td align= center>Tus</td>");
+            document.write("<td align= center>Wed</td>");
+            document.write("<td align= center>Thu</td>");
+            document.write("<td align= center>Fri</td>");
+            document.write("<td align= center>Sat</td>");
+            document.write("</tr>");
+            document.write("<tr>");
+            for (s = 0; s < startspaces; s++) {
+                document.write("<td> </td>");
+            }
+            count = 1;
+            while (count <= monthdays[thismonth]) {
+                for (b = startspaces; b < 7; b++) {
+                    linktrue = false;
+                    document.write("<td class='weekday'>");
+                    for (c = 0; c < linkdays.length; c++) {
+                        if (linkdays[c] != null) {
+                            if ((linkdays[c][0] == thismonth + 1) && (linkdays[c][1] == count)) {
+                                document.write("<a href=\"" + linkdays[c][2] + "\">");
+                                linktrue = true;
+                            }
+                        }
+                    }
+                    if (count == thisdate) {
+                        document.write("<font color='FF0000'><strong>");
+                    }
+                    if (count <= monthdays[thismonth]) {
+                        document.write(count);
+                    }
+                    else {
+                        document.write(" ");
+                    }
+                    if (count == thisdate) {
+                        document.write("</strong></font>");
+                    }
+                    if (linktrue)
+                        document.write("</a>");
+                    document.write("</td>");
+                    count++;
+                }
+                document.write("</tr>");
+                document.write("<tr>");
+                startspaces = 0;
+            }
+            document.write("</table>");
+
+        </script>
+    </div>
+      </aside>
+      <section>
+        <p>SẢN PHẨM MỚI NHẤT</p>
+        <div class="sach">
+          <p class="tensach"><a href="chitietsanpham.html"><b>Tủ Nhựa(C00)</b></a></p>
+          <img class="hinhsach" src="Hinh anh/Tủ nhựa/55.jpg" >
+          <p class="dongia">Đơn giá:<span class="gia">20,000,000 VNĐ</span></p>
+          <a href="#"><img class="nutchonmua" src="logo/mua3.jpg"></a>
+        </div>
+        <div class="sach">
+          <p class="tensach"><a href="chitietsanpham1.html"><b>Nệm (BB00)</b></a></p>
+          <img class="hinhsach" src="Hinh anh/nệm/88.jpg" >
+          <p class="dongia">Đơn giá:<span class="gia">2,000 VNĐ</span></p>
+          <a href="#"><img class="nutchonmua" src="logo/mua3.jpg"></a>
+        </div>
+        <div class="sach">
+          <p class="tensach"><a href="chitietsanpham2.html" ><b>Giường (HTML03)</b></a></p>
+          <img class="hinhsach" src="Hinh anh/giường ngủ/34.webp" >
+          <p class="dongia">Đơn giá:<span class="gia">90,000,000 VNĐ</span></p>
+          <a href="#"><img class="nutchonmua" src="logo/mua3.jpg"></a>
+        </div>
+        <div class="sach">
+          <p class="tensach"><a href="chitietsanpham3.html"><b>Bàn Ăn (A3)</b></a></p>
+          <img class="hinhsach" src="Hinh anh/bàn ăn/an.png"> 
+          <p class="dongia">Đơn giá:<span class="gia">500,000,,000 VNĐ</span></p>
+          <a href="#"><img class="nutchonmua" src="logo/mua3.jpg"></a>
+        </div>
+        <div class="sach">
+          <p class="tensach"><a href="chitietsanpham4.html"><b>Bàn Làm Việc (B22)</b></a></p>
+          <img class="hinhsach" src="Hinh anh/Bàn làm việc/lam.jpg">
+          <p class="dongia">Đơn giá:<span class="gia">10,000,000 VNĐ</span></p>
+          <a href="#"><img class="nutchonmua" src="logo/mua3.jpg"></a>
+        </div>
+        <div class="sach">
+          <p class="tensach"><a href="chitietsanpham5.html"><b>Bàn Inox (B09)</b></a></p>
+          <img class="hinhsach" src="Hinh anh/Đồ inox/inox.jpg" >
+          <p class="dongia">Đơn giá:<span class="gia">10,000,000 VNĐ</span></p>
+          <a href="#"><img class="nutchonmua" src="logo/mua3.jpg"></a>
+        </div>
+      </section>
+      <aside id="right">
+        <div id="sanphambanchay">
+        <p>SẢN PHẨM BÁN CHẠY</p>
+       <!-- <marquee behavior="alternate" direction="right">
+ <p><h3><font color="#0230E0"><img src="img/maxresdefault.jpg" width="210"><IMG SRC="img/img-share.jpg" WIDTH="210"></font>
+ </h3></p> 
+ </marquee-->
+       <marquee direction="Array" scrollamount="3" scrolldelay="100"
+        onmousemove="stop()" onmouseout="start()">
+        <a href="#"><img src="Hinh anh/bàn ghế phòng khach/ghekhach.jpg" width="130" height="110"><br>Bàn Ghế Phòng Khách (B09)</br> </a>
+        <a href=""><img src="Hinh anh/bàn ăn/an.png"width="130" height="110"><br>Bàn Ăn (A3)</br></a>
+        
+       
+       
+          
+        </marquee>
+
+      </div>
+      </section>
+      <div id="lienketwebsite">
+                    <p>LIÊN KẾT WEBSITE</p>
+                    <select onchange="window.open(this.option[this.selectedIndex].value,'blank')">
+            
+                        <option  selected>..Chọn Trang Liên Kết..<t</option>
+                        <option value="http://www.tdmu.edu.vn">-----Đại Học Thủ Dầu Một-----</option>
+                        <option value="http://www.iteee.tdmu.edu.vn"><b></b>---Viện Kỹ Thuật- Công Nghệ---</option>
+                
+                      </select>
+        </div>
+      <div id="thongketruycap">
+        <p>THỐNG KÊ TRUY CẬP</p>
+        <div align="center">
+        <p><b>Tổng truy cập: 360</b></p>
+        <p><b>Đang online: 200</b></p>
+        </div>
+        </div>
+      <div id="quangcao">
+        <p>QUẢNG CÁO</p>
+       <!--<marquee direction="Allright" scrollamount="4" scrolldelay="90"
+        onmousemove="stop()" onmouseout="start()"> -->
+        <marquee behavior="alternate" direction="right">
+        <a href="#"><img src="logo/qc2.jfif" width="120" height="100"/></a>
+
+        <a href="#"><img src="logo/qc4.jfif" width="120" height="100" /> </a>
+        <a href="#"><img src="logo/qc5.jpg" width="120" height="100" /> </a>
+        <a href="#"><img src="logo/qc6.jfif" width="120" height="100" /> </a>
+        </marquee>
+      </div>
+      </aside>
+  </div>
+  <footer>
+      <p>©2002 - Nội Thất Ngọc Vũ</p>
+      <p>
+          Website được phát triển để sử dụng làm bài tập thực hành môn Thiết kế và lập trình Website
+      </p>
+      <p>Email: noithatngocvu.thudaumotuniversity@gmail.com</p>
+  </footer>
+</body>
+</html>
