@@ -1,0 +1,362 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+ body{
+    background-image:url(../logo/br102.jpg);
+    opacity: 1.0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: auto;
+    
+    background-size: 100% 100%;
+}
+h1{
+    font-size: 18px;
+}
+
+header div img{
+   width:1000px;
+   opacity: 1;
+}
+header div{
+    width:1000px;
+    margin: auto;
+}
+
+
+header {
+    width: 1290px;
+    font-size: 10px;
+    margin: 0px auto;
+}
+header img {
+   width:200px
+}
+nav{
+    width: 1280px;
+    margin: auto;
+    clear: both;
+    background-color: #27d2f0;
+    height: 36px;
+}
+
+nav div#subnav{
+    width: 1210px;
+    margin: 0px auto;
+}
+nav ul{
+    float: left;
+    list-style:none;
+    margin-left: 40px;
+}
+nav ul li{
+    float:left;
+    padding: 11px 13px;
+}
+nav ul li a{
+    color: #080808;
+    font-size: 16px;
+    font-family: Arial;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li:hover a{
+   background-color: rgb(240, 32, 101);
+   padding: 11px 14px;
+}
+
+nav div#subnav> input[type=text]
+{   
+    
+    height: 30px;
+    width: 320px;
+    font-size: 16px;
+}
+nav div#subnav> input[type=submit]
+{
+    height: 33px;
+    width: 80px;
+    background: #fc7deb;
+   border-top-right-radius:3px;
+   border-bottom-right-radius:3px;
+  
+   font-size: 17px;
+}
+nav div#subnav>ul input[type=submit]:hover
+{
+cursor: pointer;
+}
+div#body{
+    width: 1278px;
+    margin: 0px auto;
+    background-color: #fcf5fa;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+article{
+    display: table-row;
+}
+aside#left,section{
+    display: table-cell;
+    vertical-align:top;
+}
+aside#right,section{
+    display: table-cell;
+    vertical-align:top;
+}
+aside#left{
+    width: 240px;
+}
+section{
+    width: 950px;
+    padding: 0px 8px;
+}
+aside#right{
+    width: 200px;
+}
+/*khung,bo góc cho khối div*/
+aside#left>div{
+    border: 1.5px solid #060a0e;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+/* màu nền ,bo hai góc trên ,canh lề ,cỡ chữ, màu chữ...*/
+aside#left>div>p{
+    background-color: rgb(233, 7, 83);
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(251, 252, 246);
+    height: 25px;
+    padding-top: 5px;
+}
+aside#left>div>ul{
+    padding-left: 5px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+aside#left>div>ul{
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+aside#left>div>ul>li{
+    height: 25px;
+    list-style-position: inside;
+    padding-left: 5px;
+}
+aside#left>div>ul>li a{
+    color:#1f044b;
+    text-decoration: none;
+}
+aside#left>div>ul>li a:hover{
+    color: #ff0000;
+    padding:11px 5px;
+}
+aside#right>div{
+    border: 1.5px solid #101011;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+aside#right>div>p{
+    background-color: rgb(233, 7, 83);
+    border-top-left-radius:2px ;
+    border-bottom-right-radius: 2px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(250, 243, 246);
+    height: 25px;
+    padding-top: 5px;
+}
+/* Ngăn không cho nội dung trong p bị trôi lên (vì trong p có thẻ img có dungf thược tinhs float để chuyển hình sang trái*/
+aside#right>div#sanphambanchay p{
+    clear: both;
+}
+
+aside#right>div#sanphambanchay a{
+    font-size: 10pt;
+    font-family: Arial;
+    color:#783ea7;
+    height: 90px;
+    text-align: center;
+}
+
+aside#right>div#sanphambanchay a:hover{
+    font-weight: bold;
+}
+aside#right>div#sanphambanchay{
+    background-color: rgb(242, 242, 248);
+}
+aside#right>div#lienketwebsite select{
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 3px;
+    border: #d82c2c solid 1px;
+    text-align: center;
+}
+aside#right>div#thongketruycap{
+    background-color: #e1ebf3;
+
+}
+aside#right>div#thongketruycap div p {
+    margin: 10px;
+    color: red;
+}
+/*định dạng cho thẻ select ở phần liên kết cho website */
+aside#right>div#lienketwebsite select{
+    margin: auto;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: #808080 solid 1px;  
+}
+
+aside#right>div#thongketruycap {
+    background-color:#d9e1e9;
+}
+aside#right>div#quangcao{
+    height:135px;
+}
+/*section>p{
+    /*Định dạng nền chuyển màu cho thẻ p
+    background:linear-gradient(#e5e7e7,#edf7c4,#bfdbf5) ;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(255, 251, 252);
+    height: 25px;
+    padding-top: 5px;
+}*/
+.sach{
+    width: 269px;
+    height: 342px;
+    background-color: #f6fafc;
+    margin: 1.5px;
+    border-radius: 5px;
+    border: 0.5px dashed #eff1ed;
+    float:left;
+    text-align: center;
+}
+.tensach {
+    margin-top: 3px;
+    vertical-align:top;
+    height: 40px;
+}
+.tensach a{
+    font-style:normal;
+    font-size: 18px;
+    color: rgb(160, 9, 9);
+}
+.hinhsach{
+    box-shadow: 0 4px 8px 0 rgba(0,0, 0,0,2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width:200px;
+    height:243px;
+   /*các thuộc tính dùng để tạo hiệu ứng trànorm*/
+   transform: all 0.5s ease;
+}
+/*tăng kích thước hình lên 1.1 khi rê chuột vào*/
+.hinhsach:hover{
+    transform: scale(1.1);
+}
+.donggia{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.gia{
+    color: red;
+    font-weight: bold;
+}
+.nutchonmua{
+   
+    height: 27px;
+    width:100px;
+    
+}
+footer{
+    width:1278px;
+    margin: auto;
+    background-color: #1c92a7;
+    height: 100px;
+    padding-top: 10px;
+}
+footer p{
+    text-align: center;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.calendar {
+	border: 1px solid #f51155;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.calendar table {
+		width: 100%;
+	}
+
+.calendar table tr td.monthyear {
+			background-color: rgb(233, 7, 83);
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold;
+			color: #FFF;
+			border: 1px solid #666;
+		}
+
+.calendar table tr.weektitle td {
+			text-align: center;
+			font-weight: bold;
+			border: 1px solid #666;
+			background-color: #CCF;
+		}
+
+.calendar table tr.td.weekday {
+			text-align: center;
+			font-weight: bold;
+			border: 1px solid #666;
+			background-color: #CCF;
+		}
+.calendar{
+    background: rgb(225, 248, 248);
+}
+.sach a{
+    text-decoration:none;
+}
+section>p{
+    /*Định dạng nền chuyển màu cho thẻ p*/
+    background:linear-gradient(#65cef8,#0893e4,#57d4f3) ;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    color: rgb(255, 251, 252);
+    height: 25px;
+    padding-top: 5px;
+}
+section>fieldset img{
+width:825px;
+height: 452px;
+}
+section  img{
+   
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+section{
+    background-color: rgb(202, 234, 247);
+}
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
